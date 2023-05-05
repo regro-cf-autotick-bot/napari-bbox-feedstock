@@ -1,5 +1,5 @@
 {% set name = "napari-bbox" %}
-{% set version = "0.0.2" %}
+{% set version = "0.0.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/napari-bbox-{{ version }}.tar.gz
-  sha256: 8e7a2cc87babfb04cb777acc3729e1fb05de987388aac0473db7cf3fc96cc2bb
+  sha256: ac0eb416408eae837f49b1b1fc6d0c986af4c8d57c8f873409e518dcb8b3cc11
 
 build:
   noarch: python
