@@ -1,5 +1,5 @@
 {% set name = "napari-bbox" %}
-{% set version = "0.0.2" %}
+{% set version = "0.0.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/napari-bbox-{{ version }}.tar.gz
-  sha256: 8e7a2cc87babfb04cb777acc3729e1fb05de987388aac0473db7cf3fc96cc2bb
+  sha256: ac0eb416408eae837f49b1b1fc6d0c986af4c8d57c8f873409e518dcb8b3cc11
 
 build:
   noarch: python
@@ -20,10 +20,14 @@ requirements:
     - python >=3.8,<3.11
   run:
     - magicgui
-    - napari
+    - napari <0.4.18
+    - npe2
     - numpy
+    - packaging
+    - pandas
     - python >=3.8,<3.11
     - qtpy
+    - vispy
 
 test:
   imports:
@@ -33,12 +37,14 @@ test:
     - pip check
   requires:
     - pip
+    - pyqt
 
 about:
-  home: https://github.com/bauerdavid/napari-bbox
+  home: https://pypi.org/project/napari-bbox
   summary: A new layer for bounding boxes in 2+ dimensions
   license: BSD-3-Clause
   license_file: LICENSE
+  dev_url: https://github.com/bauerdavid/napari-bbox
 
 extra:
   recipe-maintainers:
