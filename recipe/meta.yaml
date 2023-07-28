@@ -20,7 +20,7 @@ requirements:
     - python >=3.8,<3.11
   run:
     - magicgui
-    - napari
+    - napari <0.4.18
     - npe2
     - numpy
     - packaging
